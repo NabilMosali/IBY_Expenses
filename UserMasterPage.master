@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            font-size: large;
+        }
+        .auto-style3 {
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #990000;
+            font-size: small;
+        }
+        #form1 {
+            text-align: center;
+        }
+        .auto-style5 {
+            font-weight: bold;
+            color: #FF0000;
+        }
+        .auto-style8 {
+            font-weight: 700;
+            color: #FF0000;
+        }
+        .auto-style15 {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .auto-style17 {
+            font-weight: 700;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+        .auto-style18 {
+            background-color: #FFFFFF;
+        }
+        .auto-style20 {
+            font-size: x-small;
+        }
+        .auto-style23 {
+            font-weight: bold;
+            color: #FF0000;
+            font-size: small;
+        }
+        .auto-style26 {
+            font-size: small;
+        }
+        .auto-style32 {
+            color: #000000;
+            font-weight: bold;
+        }
+        .auto-style33 {
+            color: #000000;
+        }
+        .auto-style34 {
+            color: #FF0000;
+        }
+        .auto-style35 {
+            width:  90%;
+        }
+        .auto-style36 {
+            width: 60%;
+        }
+        .auto-style19 {
+            color: #000000;
+        }
+        </style>
+</head>
+<body>
+    <div style="border: thin inset #800000">
+    <form id="form1" runat="server">
+        <table class="auto-style1" style="font-family: theSans">
+            <tr>
+                <td colspan="6" style="text-align: center">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/log.JPG" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: center">
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="6" style="text-align: center; font-weight: 700; color: #FFFFFF; background-color: #990000">
+                    <marquee style="font-size: medium">
+                   نظام مصاريف الفروع - إدارة الخدمات المركزية
+                        </marquee>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style17" dir="rtl" style="border: thin inset #800000">
+                        <span class="auto-style5">الصلاحية</span><span class="auto-style33">&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User&nbsp;&nbsp; </span><asp:Label ID="PrivlageLabel" runat="server" CssClass="auto-style32" Visible="False"></asp:Label>
+                        <span class="auto-style32">&nbsp;</span></td>
+                <td style="border: thin inset #800000;" class="auto-style18" dir="rtl" colspan="2">
+                        <strong>
+                        <span class="auto-style34">المستخدم الحالي</span><span class="auto-style33"> : </span>
+                        </strong>
+                        <span class="auto-style33">&nbsp; </span>
+                        <asp:Label ID="UserNameLabel" runat="server" style="text-decoration: underline;" CssClass="auto-style32"></asp:Label>
+                &nbsp; |&nbsp;
+                        <asp:Label ID="NameLabel" runat="server" style="text-decoration: underline;" CssClass="auto-style32"></asp:Label>
+                </td>
+                <td style="border: thin inset #800000;" class="auto-style18" dir="rtl">
+                        <span class="auto-style5">الفرع</span><span class="auto-style32">&nbsp; :</span><span class="auto-style33">&nbsp; </span>
+                        <asp:Label ID="L_Branch" runat="server" style="text-decoration: underline;" CssClass="auto-style32"></asp:Label>
+                        <span class="auto-style15">&nbsp;<strong>
+                        </strong>
+                </span>
+                        <span class="auto-style32">&nbsp;&nbsp;
+                </span>
+                </td>
+                <td style="border: thin inset #800000;" class="auto-style18" colspan="2" dir="rtl">
+                        <b style="text-align: left">
+                        <span class="auto-style34">
+                        التاريخ</span><span class="auto-style33">&nbsp; :&nbsp;
+                        </span>
+                        </b>
+                        <asp:Label ID="DateLabel" runat="server" CssClass="auto-style32"></asp:Label>
+                        <span class="auto-style32">&nbsp;</span></td>
+            </tr>
+            <tr>
+                <td class="auto-style8">
+                        &nbsp;</td>
+                <td style="text-align: center">
+                        &nbsp;</td>
+                <td style="text-align: right" class="auto-style35">
+                        &nbsp;</td>
+                <td style="text-align: left">
+                        &nbsp;</td>
+                <td style="text-align: right">
+                        &nbsp;</td>
+                <td>
+                        &nbsp;</td>
+            </tr>
+          
+            <tr>
+                <td class="auto-style8" colspan="6">
+                        <table align="center" class="auto-style36">
+                            <tr>
+                                <td style="border: thin solid #C0C0C0">
+                                <asp:ImageButton ID="ImageButton5" runat="server" Height="60px" ImageUrl="~/Images/logout.png"  Width="60px" CssClass="auto-style20" PostBackUrl="~/Login.aspx" />
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                                <asp:ImageButton ID="ImageButton7" runat="server" Height="60px" ImageUrl="~/Images/C.png" PostBackUrl="~/ChangePassword.aspx" Width="60px" CssClass="auto-style20" />
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                <asp:ImageButton ID="ImageButtonReject" runat="server" Height="75px" ImageUrl="~/Images/reject.jpg"  Width="75px" PostBackUrl="~/CancelExpenses.aspx" />
+
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                                <asp:ImageButton ID="ImageButton6" runat="server" Height="60px" ImageUrl="~/Images/recxy.png" PostBackUrl="~/ShowExpenses.aspx" Width="60px" CssClass="auto-style20" />
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                                <asp:ImageButton ID="ImageButton3" runat="server" Height="60px" ImageUrl="~/Images/repo.jpg" PostBackUrl="~/ViewExpense.aspx" Width="60px" CssClass="auto-style20" />
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                                <asp:ImageButton ID="ImageButton2" runat="server" Height="60px" ImageUrl="~/Images/dd.png" PostBackUrl="~/AddExpense.aspx" Width="60px" CssClass="auto-style20" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: thin solid #C0C0C0">
+                    <asp:LinkButton ID="LinkButton1" runat="server"  ValidationGroup="x" CssClass="auto-style23" OnClick="LinkButton1_Click" >خروج</asp:LinkButton>
+                                </td>
+                                <td style="border: thin solid #C0C0C0">
+                    <a href="ChangePassword.aspx">تغيير كلمة السر</a></td>
+                                <td style="border: thin solid #C0C0C0">
+                                    <a href="CancelExpenses.aspx">كنسلت الطلب</a></td>
+                                <td style="border: thin solid #C0C0C0">
+                    <a href="ShowExpenses.aspx">متابعة المصاريف</a></td>
+                                <td style="border: thin solid #C0C0C0">
+                    <a href="ViewExpense.aspx">عرض المصاريف</a></td>
+                                <td style="border: thin solid #C0C0C0">
+                    <strong> <a href="Branchies.aspx"><span class="auto-style26">ا</span></a><span class="auto-style26"><a href="AddExpense.aspx">ضافة مصروف جديد</a></span></strong></td>
+                            </tr>
+                        </table>
+                </td>
+            </tr>
+          
+            <tr>
+                <td colspan="6">
+                        &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8" colspan="6">
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8" colspan="6">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="6">Development &amp; Research© 2020 | Developed by : Nabil Mosali </td>
+            </tr>
+        </table>
+    </form>
+        </div>
+</body>
+</html>
